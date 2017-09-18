@@ -26,23 +26,22 @@ class TableUser extends Component {
                    </tr>
                    </thead>
                    <tbody>
-                   {
-                       (this.props.data.length !== 0) ?  this.props.data.map((elem, i)=> {
-                               return (
-                                   <tr key={elem.id} className={i}>
-                                       <td>{elem.id} </td>
-                                       <td>{elem.email} </td>
-                                       <td>{elem.name} </td>
-                                       <td>{elem.address.city}</td>
-                                       <td>
-                                           <button onClick={editUser.editUserInfo.bind(this,i)} className="btn btn-default">Edit user</button>
-                                       </td>
-                                   </tr>
-                               )
-                           }
-                       ): <tr>Test2</tr>
-                   }
-                   
+                       {
+                           (this.props.data.length !== 0) ?  this.props.data.map((elem, i)=> {
+                                   return (
+                                       <tr key={elem.id} className={i}>
+                                           <td>{elem.id} </td>
+                                           <td>{elem.email} </td>
+                                           <td>{elem.name} </td>
+                                           <td>{elem.address.city}</td>
+                                           <td>
+                                               <button onClick={editUser.editUserInfo.bind(this,i)} className="btn btn-default">Edit user</button>
+                                           </td>
+                                       </tr>
+                                   )
+                               }
+                           ): <tr>Test2</tr>
+                       }
                    </tbody>
                </table>
            </div>
